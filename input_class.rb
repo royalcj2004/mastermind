@@ -3,7 +3,6 @@ class Input
 	def self.get_user_name
 		puts Messages.intro_to_name
 		user_name = gets.chomp
-		
 		puts Messages.mastermind_user_name(user_name)
 		user_name
 

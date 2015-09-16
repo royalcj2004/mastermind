@@ -1,7 +1,5 @@
 class Game
 
-
-
 	def self.gets_color_hash_from_main_flow_hash(flow_hash)
 		color_number_pair = {}
 
@@ -64,17 +62,13 @@ class Game
 		colors_in_sentence.join(", ")
 	end
 
-
-
-
-
-
 	def self.get_user_guess
 		puts "What's your guess?"
 		user_input_string = gets.chomp
 		user_guess_array = user_input_string.downcase.split("")
 		user_guess_array
 	end
+
 
 
 

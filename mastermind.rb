@@ -1,6 +1,9 @@
 require 'pry'
 require "colorize"
+<<<<<<< HEAD
 require_relative 'topten'
+=======
+>>>>>>> c184ff8bb477efa5cbd8a148f838d44498bffdf0
 require_relative 'input_class'
 require_relative 'evaluator_class'
 require_relative 'game_class'
@@ -9,6 +12,7 @@ require_relative 'messages_class'
 
 
 
+<<<<<<< HEAD
 
 
 class Mastermind
@@ -18,6 +22,11 @@ class Mastermind
 	flow_hash = {}
 
 
+=======
+class Mastermind
+	Messages.mastermind_welcome
+	
+>>>>>>> c184ff8bb477efa5cbd8a148f838d44498bffdf0
 
 
 	
@@ -67,7 +76,6 @@ class Mastermind
 				redo
 				
 		end
-
 
 	end
 end

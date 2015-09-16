@@ -33,7 +33,6 @@ class Messages
 
 	def self.mastermind_choose_level
 		"To start the game, select a level you would like to play:\nEnter (1) for Beginner\nEnter (2) for Intermediate,\nEnter (3) for Advanced\n"
-
 	end
 
 	def self.mastermind_chosen_level(chosen_level)
@@ -56,7 +55,6 @@ class Messages
 		
 	end
 
-
 	def self.times_tried(number_of_times)
 		"Number of attempts made: #{number_of_times.to_s.blue}".magenta
 	end
@@ -66,14 +64,12 @@ class Messages
 		"Number of attempts left: #{number_of_times.to_s}".magenta
 	end
 
-	
 	def self.mastermind_user_name(name)
 		"K. #{name.upcase.green}, Let's play."
 	end
 
 
 	def self.mastermind_evaluation_status(evaluation_hash)
-
 		exact_matches = evaluation_hash[:exact]
 
 		partial_matches = evaluation_hash[:partial]
