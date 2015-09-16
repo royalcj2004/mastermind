@@ -14,6 +14,11 @@ class Game
 	end
 
 
+	def self.add_to_flow_hash
+
+	end
+
+
 
 
 	def self.generate_comp_code (flow_hash)
@@ -106,6 +111,7 @@ class Game
 						end
 						end_time = Time.now
 					else
+						binding.pry
 						message = Messages.mastermind_evaluation_status(Evaluator.compare(code_choice_array, user_choice_array))
 						#binding.pry
 						end_time = Time.now
@@ -165,6 +171,7 @@ class Game
 				puts Messages.times_tried(game_status[:times_tried])
 				puts Messages.times_left(game_status[:times_left])
 				puts game_status[:duration]
+				binding.pry
 
 				#game_status[:computer_secret_code] = code_choice_array.join
 				#puts game_status[:computer_secret_code]

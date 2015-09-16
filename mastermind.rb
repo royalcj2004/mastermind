@@ -1,5 +1,6 @@
 require 'pry'
 require "colorize"
+require_relative 'topten'
 require_relative 'input_class'
 require_relative 'evaluator_class'
 require_relative 'game_class'
@@ -43,10 +44,13 @@ class Mastermind
 
 
 				Game.intro(flow_hash)
+				binding.pry
 
 				Game.compare(secret_code)
 
-				
+				Topten.get_player_details(flow_hash)
+
+
 
 				
 
