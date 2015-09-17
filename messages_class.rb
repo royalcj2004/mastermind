@@ -5,6 +5,12 @@ class Messages
 	end
 
 
+	def self.game_intro_message
+		puts "Enter #{'p'.green} to #{'start the game'.green}, #{'q'.red} to #{'quit the game'.red}, #{'t'.magenta} to view #{'top scores'.magenta} #{'i'.blue} to load #{'instructions'.blue} or #{'b'.yellow} to view #{'backgrounds'.yellow} of the game. "
+
+	end
+
+
 	def self.intro
 		puts "I have generated a beginner sequence with four elements made up of: #{'(r)ed'.red}, (g)reen, (b)lue, and (y)ellow. Use (q)uit at any time to end the game.\n"
 	end
@@ -85,6 +91,17 @@ class Messages
 
 	def self.cheat_message(cheat_array)
 		"#{cheat_array.join} --- BUT WHY DO U WANT TO CHEAT???? ARE U A CHEAT????".red
+	end
+
+	def self.display_top_ten(top_ten_hash)
+		top_ten_hash.each do |key,value|
+
+			puts "HIGH SCORE FOR #{key.upcase.yellow} LEVEL\n"
+			value.each do |player_details|
+				puts "#{player_details[0].capitalize.magenta} solved '#{player_details[1].magenta}' in #{player_details[2].to_s.cyan} gueses, over #{player_details[3].magenta}.\n"
+			end
+
+		end
 	end
 
 

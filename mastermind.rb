@@ -21,8 +21,7 @@ class Mastermind
 	
 	
 	loop do
-		puts "Enter #{'p'.green} to #{'start the game'.green}, #{'q'.red} to #{'quit the game'.red}, #{'i'.blue} to load #{'instructions'.blue} or #{'b'.yellow} to view #{'backgrounds'.yellow} of the game. "
-
+		puts Messages.game_intro_message
 		start_input = gets.chomp
 		
 		
@@ -59,6 +58,10 @@ class Mastermind
 
 			when "i"
 				Messages.mastermind_instructions
+			when "t"
+				#binding.pry
+				TopTen.get_top_ten_sorted
+
 			when "b"
 				Messages.mastermind_background        
 			when "q"
