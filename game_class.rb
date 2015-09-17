@@ -12,7 +12,10 @@ class Game
 	end
 
 
-	def self.add_to_flow_hash
+	def self.add_to_flow_hash(flow_hash)
+		flow_hash[:exact]
+
+
 
 	end
 
@@ -105,7 +108,7 @@ class Game
 						end
 						end_time = Time.now
 					else
-						binding.pry
+						#binding.pry
 						message = Messages.mastermind_evaluation_status(Evaluator.compare(code_choice_array, user_choice_array))
 						#binding.pry
 						end_time = Time.now
@@ -138,11 +141,11 @@ class Game
                     
 					minutes = (period / 60).floor
 					seconds = (period % 60).ceil
-					duration = "#{minutes}min #{seconds}sec"
+					duration_in_words = "#{minutes}min #{seconds}sec"
 				else
 				    
 					seconds = period.floor
-					duration = "#{seconds} seconds"
+					duration_in_words = "#{seconds} seconds"
 				end
 
 				trials += 1
@@ -156,8 +159,9 @@ class Game
 				game_status[:times_left] = number_of_trials_allowed-trials
 				#binding.pry
 				game_status[:status_message] = message
+				game_status[:period_in_figures] = period
 
-				game_status[:period] = duration
+				game_status[:period] = duration_in_words
 
 
 
@@ -165,7 +169,7 @@ class Game
 				puts Messages.times_tried(game_status[:times_tried])
 				puts Messages.times_left(game_status[:times_left])
 				puts game_status[:duration]
-				binding.pry
+				#binding.pry
 
 				#game_status[:computer_secret_code] = code_choice_array.join
 				#puts game_status[:computer_secret_code]
@@ -177,6 +181,7 @@ class Game
 
 
 				if finished == 1
+					game_status[:success] = 1
 					puts "You finished the game in #{game_status[:times_tried]} attempt(s) and in #{game_status[:period]}."
 					break
 					
@@ -189,13 +194,17 @@ class Game
 					
 					
 				end
+
+				
+
+				
 				
 			
 
 
 		end
 
-
+game_status
 
 	end
 

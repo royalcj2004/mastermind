@@ -20,10 +20,8 @@ class Evaluator
                 #This is the code to get the pairs that are not correct.
 	        end
 	    end
-<<<<<<< HEAD
-	    
-=======
->>>>>>> c184ff8bb477efa5cbd8a148f838d44498bffdf0
+
+
 	    number_of_correct_guesses = matched_hash.values.reduce(:+)
 	   
 	   	exact = 0
@@ -50,8 +48,9 @@ class Evaluator
 		partial_array_user.select do |i| 
 		partial += 1 if partial_array_comp.include? (i)
 		end
-<<<<<<< HEAD
-		
+
+
+
 		if number_of_correct_guesses == nil
 		    number_of_correct_guesses = 0
 		end
@@ -68,13 +67,11 @@ class Evaluator
 		result_hash
 
 	
-=======
-		result_hash[:exact] = exact
-		result_hash[:unexact] = unexact
-		result_hash[:partial] = number_of_correct_guesses - exact
-		result_hash[:number_of_correct_guesses] = number_of_correct_guesses
-		result_hash
->>>>>>> c184ff8bb477efa5cbd8a148f838d44498bffdf0
+
+
+
+
+
 	    
 	end
 	

@@ -32,7 +32,9 @@ class Messages
 	end
 
 	def self.mastermind_choose_level
+
 		"To start the game, select a level you would like to play:\nEnter (1) for Beginner\nEnter (2) for Intermediate,\nEnter (3) for Advanced\n"
+
 	end
 
 	def self.mastermind_chosen_level(chosen_level)

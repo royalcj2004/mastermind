@@ -1,9 +1,7 @@
 require 'pry'
 require "colorize"
-<<<<<<< HEAD
 require_relative 'topten'
-=======
->>>>>>> c184ff8bb477efa5cbd8a148f838d44498bffdf0
+
 require_relative 'input_class'
 require_relative 'evaluator_class'
 require_relative 'game_class'
@@ -11,8 +9,6 @@ require_relative 'messages_class'
 
 
 
-
-<<<<<<< HEAD
 
 
 class Mastermind
@@ -22,13 +18,7 @@ class Mastermind
 	flow_hash = {}
 
 
-=======
-class Mastermind
-	Messages.mastermind_welcome
 	
->>>>>>> c184ff8bb477efa5cbd8a148f838d44498bffdf0
-
-
 	
 	loop do
 		puts "Enter #{'p'.green} to #{'start the game'.green}, #{'q'.red} to #{'quit the game'.red}, #{'i'.blue} to load #{'instructions'.blue} or #{'b'.yellow} to view #{'backgrounds'.yellow} of the game. "
@@ -53,11 +43,14 @@ class Mastermind
 
 
 				Game.intro(flow_hash)
-				binding.pry
+				#binding.pry
 
-				Game.compare(secret_code)
+				game_status_to_hash = Game.compare(secret_code)
+				flow_hash[:game_status] = game_status_to_hash
+				
 
-				Topten.get_player_details(flow_hash)
+
+				TopTen.get_player_score_details(flow_hash)
 
 
 
