@@ -47,5 +47,3 @@ class Evaluator
 	end
 
 end
-
-Evaluator.compare(["r","r","r","r"],["r","r","r","r"])
