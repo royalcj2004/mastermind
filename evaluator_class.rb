@@ -1,4 +1,3 @@
-require 'pry'
 class Evaluator
 	def self.compare(secret_code, guess)
 		secret_hash = get_hash_from_array_with_number_of_occurences(secret_code)
